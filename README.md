@@ -8,6 +8,10 @@ Somos un sello editorial de libros multinacional. Queremos ofrecer a nuestro pú
 
 Para ello, queremos desarrollar una aplicación web que permita a los usuarios ver los libros disponibles y crear una lista de lectura.
 
+## Integrantes
+- [Emiliano Nuñez](https://github.com/EmiNu5/)
+- [Ornella Meneghini](https://github.com/MeneghiniOrnella/) 
+
 ## Requisitos
 
 ### Funcionalidad
@@ -27,3 +31,13 @@ Para ello, queremos desarrollar una aplicación web que permita a los usuarios v
 7. **Despliegue**: La aplicación debe estar desplegada en algún servicio de hosting gratuito (Netlify, Vercel, Firebase, etc) y debe ser accesible a través de una URL pública. Indica la URL en el README.
 
 8. **Test**: La aplicación debe tener AL MENOS un test. Haz el test que consideres más importante para tu aplicación.
+
+### Herramientas utilizadas
+- ReactJs
+- Tailwind CSS
+
+### Ejecución
+```
+npm install
+npm run dev
+```
