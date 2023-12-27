@@ -1,11 +1,11 @@
 import books from '../data/mocks/books'
 
-export function getLibros(textoBusqueda) {
-  const textoBusquedaLowerCase = textoBusqueda.toLowerCase()
-  return books.filter((book) => {
+export function getLibros(textSearch) {
+  const searchLoweCase = textSearch.toLowerCase()
+  return books.filter(({title, author}) => {
     return (
-      book.titulo.toLowerCase().includes(textoBusquedaLowerCase) ||
-      book.autor.toLowerCase().includes(textoBusquedaLowerCase)
+      title.toLowerCase().includes(searchLoweCase) ||
+      author.toLowerCase().includes(searchLoweCase)
     )
   })
 }

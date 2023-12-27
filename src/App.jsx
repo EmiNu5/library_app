@@ -4,33 +4,34 @@ import SearchBar from './components/SearchBar'
 import CardBook from './components/CardBook'
 import { getLibros } from './services/book.js'
 
-function App() {
-  const [librosStatus, setLibrosStatus] = useState([])
-  const [textoBusqueda, setTextoBusqueda] = useState('')
+const App = () => {
+  const [booksStatus, setbooksStatus] = useState([])
+  const [textSearch, setTextSearch] = useState('')
 
   const fetchData = () => {
-    const librosSet = getLibros(textoBusqueda)
-    setLibrosStatus(librosSet)
+    const librosSet = getLibros(textSearch)
+    setbooksStatus(librosSet)
   }
-  const cambioTextoBusqueda = (value) => {
-    setTextoBusqueda(value)
+  const changeTtextSearch = (value) => {
+    setTextSearch(value)
   }
 
   useEffect(() => {
     fetchData()
-  }, [textoBusqueda])
+  }, [textSearch])
 
   return (
     <>
       <div className="bg-[--colorPrim] min-h-screen">
-        <h1 className="font-extrabold text-4xl">Librery_app</h1>
-        <div className="mx-0">
-          <SearchBar
-            textoAbuscar={textoBusqueda}
-            cambioTextoBusqueda={cambioTextoBusqueda}
-          />
-
-        <CardBook allBooks={librosStatus} />
+        <div className="py-2">
+          <h1 className="font-extrabold text-4xl">Library_app</h1>
+          <div className="mx-0">
+            <SearchBar
+              textoAbuscar={textSearch}
+              changeTtextSearch={changeTtextSearch}
+            />
+        </div>
+        <CardBook allBooks={booksStatus} />
         </div>
       </div>
     </>
