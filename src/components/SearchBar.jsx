@@ -1,10 +1,10 @@
 // eslint-disable-next-line react/prop-types
-const SearchBar = ({ textoAbuscar,changeTtextSearch }) => {
+const SearchBar = ({ textSearch,changeTtextSearch }) => {
     return (
         <div className="bg-[--colorCuar]">
             <input className="rounded-md text-2xl my-8" 
                 type="text" placeholder="Let's search" 
-                value={textoAbuscar} 
+                value={textSearch} 
                 onChange={(e)=>changeTtextSearch(e.target.value)}
                 required
             />
