@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+
 import SearchBar from './components/SearchBar'
 import CardBook from './components/CardBook'
+import DetailsBook from './components/DetailsBook'
+
 import { getLibros } from './services/book.js'
 
 const App = () => {
   const [booksStatus, setbooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
+  const [selected, setSelected] = useState(null)
+
+  const openDetails = index => {
+    setSelected(index)
+  }
 
   const fetchData = () => {
     const librosSet = getLibros(textSearch)
     setbooksStatus(librosSet)
   }
-  const changeTtextSearch = (value) => {
+  const changeTextSearch = (value) => {
     setTextSearch(value)
   }
 
@@ -28,11 +36,17 @@ const App = () => {
           <div className="mx-0">
             <SearchBar
               textoAbuscar={textSearch}
-              changeTtextSearch={changeTtextSearch}
+              changeTextSearch={ changeTextSearch }
             />
         </div>
-        <CardBook allBooks={booksStatus} />
+        <CardBook
+          allBooks={ booksStatus } 
+          openDetails={ openDetails }
+        />
         </div>
+        <DetailsBook
+          selected={ selected }
+        />
       </div>
     </>
   )
