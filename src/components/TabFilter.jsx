@@ -2,17 +2,19 @@ import React from 'react'
 
 function TabFilter() {
   return (
-<div className="flex relative w-auto h-16 items-center justify-center flex-wrap ">
-  <span className='cursor-pointer'>
-    <button className="flex bg-white px-3 py-2 m-0 text-sm font-semibold text-gray-900 shadow-sm ring-gray-300 hover:bg-[--colorSec]">Más populares</button>
-  </span>
-  <span className='cursor-pointer'>
-    <button className="flex bg-white px-3 py-2 m-0 text-sm font-semibold text-gray-900 shadow-sm ring-gray-300 hover:bg-[--colorSec]">Novedades</button>
-  </span>
-  <span className='cursor-pointer'>
-    <button className="flex bg-white px-3 py-2 m-0 text-sm font-semibold text-gray-900 shadow-sm ring-gray-300 hover:bg-[--colorSec]">Bestsellers</button>
-  </span>
-</div>
+    <div className="mx-auto ">
+      <span className="border shadow-sm  grid grid-cols-3 w-3/12 min-h-9 min-w-fit mx-auto my-2 rounded-3xl">
+        <button className="cursor-pointer hover:bg-[--colorSec] px-2 rounded-l-3xl font-semibold">
+          Mas polulares
+        </button>
+        <button className="cursor-pointer hover:bg-[--colorSec] px-2 font-semibold">
+          Nuevos
+        </button>
+        <button className="cursor-pointer hover:bg-[--colorSec] px-2 rounded-r-3xl  font-semibold">
+          Bestsellers
+        </button>
+      </span>
+    </div>
   )
 }
 
