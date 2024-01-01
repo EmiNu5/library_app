@@ -16,6 +16,11 @@ const App = () => {
   const changeTtextSearch = (value) => {
     setTextSearch(value)
   }
+  const categoriesChosen = (flag) => {
+    const librosSet = getLibros(textSearch)
+    const librosFilter = librosSet.filter((book) => book.Categories === flag)
+    setbooksStatus(librosFilter)
+  }
 
   useEffect(() => {
     fetchData()
@@ -32,7 +37,8 @@ const App = () => {
               changeTtextSearch={changeTtextSearch}
             />
         </div>
-        <TabFilter/>
+        <TabFilter
+        handleFilter={categoriesChosen}/>
         <CardBook allBooks={booksStatus} />
         </div>
       </div>
