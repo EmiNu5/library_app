@@ -22,12 +22,10 @@ const App = () => {
   }
   useEffect(() => {
     fetchData()
-  }, [textSearch])
+  }, [textSearch]
+  )
 
-  const openDetailsBook = (book) => {
-    console.log(book)
-    setSelectedBook(book)
-  }
+
 
   return (
     <>
@@ -42,7 +40,7 @@ const App = () => {
         </div>
         <CardBook
           allBooks={ booksStatus } 
-          openDetails={ openDetailsBook }
+          setDetailsBooks={ setSelectedBook }
         />
         </div>
         { selectedBook ? <DetailsBook book={ selectedBook } /> : null }
