@@ -10,23 +10,24 @@ import { getLibros } from './services/book.js'
 const App = () => {
   const [booksStatus, setbooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
-  const [selected, setSelected] = useState(null)
-
-  const openDetails = index => {
-    setSelected(index)
-  }
+  const [selectedBook, setSelectedBook] = useState(null)
 
   const fetchData = () => {
     const librosSet = getLibros(textSearch)
     setbooksStatus(librosSet)
   }
+
   const changeTextSearch = (value) => {
     setTextSearch(value)
   }
-
   useEffect(() => {
     fetchData()
   }, [textSearch])
+
+  const openDetailsBook = (book) => {
+    console.log(book)
+    setSelectedBook(book)
+  }
 
   return (
     <>
@@ -41,12 +42,10 @@ const App = () => {
         </div>
         <CardBook
           allBooks={ booksStatus } 
-          openDetails={ openDetails }
+          openDetails={ openDetailsBook }
         />
         </div>
-        <DetailsBook
-          selected={ selected }
-        />
+        { selectedBook ? <DetailsBook book={ selectedBook } /> : null }
       </div>
     </>
   )
