@@ -5,7 +5,6 @@ import { getLibros } from './services/book.js'
 import SearchBar from './components/SearchBar'
 import CardBook from './components/CardBook'
 import DetailsBook from './components/DetailsBook'
-import PageNotFound from './components/PageNotFound'
 
 const App = () => {
   const [booksStatus, setBooksStatus] = useState([])
