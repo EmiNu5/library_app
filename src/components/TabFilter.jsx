@@ -12,9 +12,9 @@ function TabFilter({ handleFilter }) {
     <div className="mx-auto ">
       <span className="border shadow-sm  grid grid-cols-3 w-3/12 min-h-9 min-w-fit mx-auto my-2 rounded-3xl">
         <button
-           className={`cursor-pointer px-2 rounded-l-3xl font-semibold ${
-            activeButton === "popular" ? "bg-[--colorSec]" : "hover:bg-[--colorSec]"
-          }`}
+          className={`cursor-pointer px-2 rounded-l-3xl font-semibold ${
+          activeButton === "popular" ? "bg-[--colorSec]" : "hover:bg-[--colorSec]"
+        }`}
           onClick={() => handleClick("popular")}
         >
           Popular
