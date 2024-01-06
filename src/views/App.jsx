@@ -28,11 +28,11 @@ const App = () => {
     const librosFilter = librosSet.filter((book) => book.Categories === flag)
     setBooksStatus(librosFilter)
   }
+
   const openDetailsModal = (book) => {
     setSelectedBook(book)
     setIsOpenDetailsBook(true)
   }
-
   const closeDetailsBook = () => {
     setSelectedBook(null)
     setIsOpenDetailsBook(false)
@@ -50,10 +50,7 @@ const App = () => {
           Library_app
         </h1>
         <div className="mx-0">
-          <SearchBar
-            textoAbuscar={textSearch}
-            changeTextSearch={changeTextSearch}
-          />
+          <SearchBar textoAbuscar={textSearch} changeTextSearch={changeTextSearch} />
         </div>
         <TabFilter handleFilter={categoriesChosen} />
         <CardBook allBooks={booksStatus} setDetailsBooks={openDetailsModal} />
