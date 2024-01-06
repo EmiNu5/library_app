@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { getLibros } from '../services/book.js'
 
 import SearchBar from '../components/SearchBar'
 import CardBook from '../components/CardBook'
 import DetailsBook from '../components/DetailsBook'
 import Footer from 'src/components/Footer'
-import TabFilter from 'src/components/TabFilter'
+import TabFilter from '../components/TabFilter.jsx'
 import Navbar from 'src/components/Navbar'
+import './App.css'
 
 const App = () => {
   const [booksStatus, setBooksStatus] = useState([])
@@ -26,7 +26,7 @@ const App = () => {
   const categoriesChosen = (flag) => {
     const librosSet = getLibros(textSearch)
     const librosFilter = librosSet.filter((book) => book.Categories === flag)
-    setbooksStatus(librosFilter)
+    setBooksStatus(librosFilter)
   }
   const openDetailsModal = (book) => {
     setSelectedBook(book)
