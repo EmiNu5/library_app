@@ -5,7 +5,7 @@ export function getLibros(textSearch) {
   return books.filter(({title, author}) => {
     return (
       title.toLowerCase().includes(searchLoweCase) ||
-      author.toLowerCase().includes(searchLoweCase)
+      author.toLowerCase().includes(searchLoweCase) 
     )
   })
 }
