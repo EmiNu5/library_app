@@ -12,6 +12,7 @@ const DetailsBook = ({ book, closeDetailsBook }) => {
           <h2 className="font-bold text-red-800 text-xl">{book.title}</h2>
           <p className="font-semibold text-l">{book.author}</p>
           <p className="">{book.sinopsis}</p>
+          <button>añadir a carrito</button>
         </div>
       </div>
     </div>

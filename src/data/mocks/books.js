@@ -5,7 +5,8 @@ const books = [
     image: 'https://m.media-amazon.com/images/I/A1lNJP8sC6L._SY425_.jpg',
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 2023,
-    Categories: 'bestsellers' 
+    Categories: 'bestsellers',
+    price: 40
   },
   {
     title: 'The Lord of the rings',
@@ -13,7 +14,8 @@ const books = [
     image: 'https://m.media-amazon.com/images/I/41vi64toRPL._SY445_SX342_.jpg',
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 2023,
-    Categories: 'new'
+    Categories: 'new',
+    price: 40
   },
   {
     title: "Harry Potter and the Philosopher's Stone",
@@ -21,7 +23,8 @@ const books = [
     image: 'https://m.media-amazon.com/images/I/91FYB5csxWL._AC_UY218_.jpg',
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 1994,
-    Categories: 'bestsellers'
+    Categories: 'bestsellers',
+    price: 40
   },
   {
     title: 'The Hobbit',
@@ -29,7 +32,8 @@ const books = [
     image: 'https://m.media-amazon.com/images/I/51zMWaFM+PL.jpg',
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 1984,
-    Categories: 'bestsellers'
+    Categories: 'bestsellers',
+    price: 50
   },
   {
     title: '1984',
@@ -38,7 +42,7 @@ const books = [
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 1984,
     Categories: 'popular',
-    
+    price: 40
   },
   {
     title: 'Brave New World',
@@ -47,6 +51,7 @@ const books = [
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 1984,
     Categories: 'popular',
+    price: 40
   },
   {
     title: 'The Hunger Games',
@@ -55,6 +60,7 @@ const books = [
     sinopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     Publication_date: 1984,
     Categories: 'popular',
+    price: 10
   },
 ]
 

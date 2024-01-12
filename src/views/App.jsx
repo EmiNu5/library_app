@@ -14,6 +14,7 @@ const App = () => {
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
   const [isOpenDetailsBook, setIsOpenDetailsBook] = useState(false)
+  const [addToCart, setAddToCart] = useState([])
 
   const fetchData = () => {
     const librosSet = getLibros(textSearch)

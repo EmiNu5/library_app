@@ -4,9 +4,15 @@ export default function Navbar() {
       <div className="flex items-center space-x-3 rtl:space-x-reverse"></div>
       <ul className="w-full md:block md:w-auto">
         <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-white">
-          <li className="cursor-pointer font-semibold">Home</li>
-          <li className="cursor-pointer font-semibold">About</li>
-          <li className="cursor-pointer font-semibold">Carrito</li>
+          <li className="cursor-pointer font-semibold">
+            <a href="#">Inicio</a>
+          </li>
+          <li className="cursor-pointer font-semibold">
+            <a href="./acercade">Acerca de</a>
+          </li>
+          <li className="cursor-pointer font-semibold">
+            <a href="./carrito">Carrito</a>
+          </li>
         </div>
       </ul>
     </div>
