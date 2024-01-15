@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom"
+import { useRouteError } from 'react-router-dom'
 
 const PageNotFound = () => {
   const error = useRouteError()
@@ -18,9 +18,9 @@ const PageNotFound = () => {
       >
         F5
       </button>
-      <a href="/"
-        className="bg-red-800 text-white m-4 p-4 rounded font-bold"
-      >Home</a>
+      <a href="/" className="bg-red-800 text-white m-4 p-4 rounded font-bold">
+        Home
+      </a>
     </div>
   )
 }

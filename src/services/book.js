@@ -1,4 +1,4 @@
-import books from '../data/mocks/books'
+import books from '../mocks/books'
 
 export function getLibros(textSearch) {
   const searchLoweCase = textSearch.toLowerCase()

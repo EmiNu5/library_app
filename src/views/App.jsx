@@ -1,66 +1,20 @@
 import { useEffect, useState } from 'react'
-import { getLibros } from '../services/book.js'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Cart from './Cart'
+import PageNotFound from './PageNotFound'
 
-import SearchBar from '../components/SearchBar'
-import CardBook from '../components/CardBook'
-import DetailsBook from '../components/DetailsBook'
-import Footer from 'src/components/Footer'
-import TabFilter from '../components/TabFilter.jsx'
-import Navbar from 'src/components/Navbar'
-import './App.css'
-
-const App = () => {
-  const [booksStatus, setBooksStatus] = useState([])
-  const [textSearch, setTextSearch] = useState('')
-  const [selectedBook, setSelectedBook] = useState(null)
-  const [isOpenDetailsBook, setIsOpenDetailsBook] = useState(false)
-  const [addToCart, setAddToCart] = useState([])
-
-  const fetchData = () => {
-    const librosSet = getLibros(textSearch)
-    setBooksStatus(librosSet)
-  }
-
-  const changeTextSearch = (value) => {
-    setTextSearch(value)
-  }
-  const categoriesChosen = (flag) => {
-    const librosSet = getLibros(textSearch)
-    const librosFilter = librosSet.filter((book) => book.Categories === flag)
-    setBooksStatus(librosFilter)
-  }
-
-  const openDetailsModal = (book) => {
-    setSelectedBook(book)
-    setIsOpenDetailsBook(true)
-  }
-  const closeDetailsBook = () => {
-    setSelectedBook(null)
-    setIsOpenDetailsBook(false)
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [textSearch])
-
+const App = () = {
   return (
-    <div className="bg-[--colorPrim] min-h-screen">
-      <Navbar />
-      <div className="container mx-auto w-18/12 md:w-8/12">
-        <h1 className="font-extrabold text-4xl mb-4 text-center">
-          Library_app
-        </h1>
-        <div className="mx-0">
-          <SearchBar textoAbuscar={textSearch} changeTextSearch={changeTextSearch} />
-        </div>
-        <TabFilter handleFilter={categoriesChosen} />
-        <CardBook allBooks={booksStatus} setDetailsBooks={openDetailsModal} />
-      </div>
-      {selectedBook && (
-        <DetailsBook book={selectedBook} closeDetailsBook={closeDetailsBook} />
-      )}
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/acercade" element={<About />} />
+        <Route path="/carrito" element={<Cart />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </Router>
   )
 }
 

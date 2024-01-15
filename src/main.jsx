@@ -1,32 +1,32 @@
-import * as React from "react"
-import * as ReactDOM from "react-dom/client"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './views/App'
-import Cart from "./views/Cart"
+import Cart from './views/Cart'
 import About from './views/About'
-import PageNotFound from "./views/PageNotFound"
-import "./index.css"
+import PageNotFound from './views/PageNotFound'
+import './index.css'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
-    errorElement: <PageNotFound />
+    errorElement: <PageNotFound />,
   },
   {
     path: 'carrito',
     element: <Cart />,
-    errorElement: <PageNotFound />
+    errorElement: <PageNotFound />,
   },
   {
     path: 'acercade',
     element: <About />,
-    errorElement: <PageNotFound />
-  }
+    errorElement: <PageNotFound />,
+  },
 ])
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 )

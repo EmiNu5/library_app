@@ -3,7 +3,7 @@
 const CardBook = ({ allBooks, setDetailsBooks }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 border-spacing-5 p-2 bg-[--colorPrim]">
-      {allBooks.map((book, index) => (
+      {allBooks.map((book, index) => 
         <div
           key={index}
           className="mx-auto cursor-pointer p-2 m-2 hover:bg-[--colorSec] rounded"
@@ -15,7 +15,7 @@ const CardBook = ({ allBooks, setDetailsBooks }) => {
             className="flex w-32  mx-auto  h-48 object-fit rounded"
           />
         </div>
-      ))}
+      )}
     </div>
   )
 }
