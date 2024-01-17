@@ -12,7 +12,7 @@ export default function Navbar() {
           Acerca de
         </NavLink>
         <NavLink className="cursor-pointer font-semibold" to="./carrito">
-          Carrito <span className="bg-white rounded p-1 font-mono">4</span>
+          Carrito <span className="bg-white text-black rounded p-1 font-mono">0</span>
         </NavLink>
       </div>
     </div>

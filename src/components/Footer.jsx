@@ -5,12 +5,12 @@ const Footer = () => {
         <div className="w-full justify-center b-0">
           <a
             href="https://github.com/EmiNu5/librery_app.git"
-            className="text-white cursor-pointer mb-12"
+            className=""
           >
             Library_app
           </a>
           <br />
-          <a href="#" className="text-white cursor-pointer">
+          <a href="#" className="">
             ©2024
           </a>
         </div>

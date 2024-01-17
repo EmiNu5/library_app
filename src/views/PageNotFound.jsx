@@ -6,20 +6,20 @@ const PageNotFound = () => {
 
   return (
     <div className="text-center mt-20">
-      <h1 className="text-4x1 font-bold mb-4 text-red-700">
+      <h1 className='title'>
         404! Page Not Found
       </h1>
-      <p className="text-4x1 font-bold mb-4 text-red-600 underline">
+      <p className="">
         <i>{error.statusText || error.message}</i>
       </p>
       <button
-        className="bg-red-800 text-white m-4 p-4 rounded font-bold"
+        className="btn"
         onClick={() => window.location.reload(true)}
       >
-        F5
+        F5 - Actualizar
       </button>
-      <a href="/" className="bg-red-800 text-white m-4 p-4 rounded font-bold">
-        Home
+      <a href="/" className="btn">
+        Inicio
       </a>
     </div>
   )

@@ -1,14 +1,14 @@
+import { useState, useEffect } from 'react'
 import { getLibros } from '../services/book.js'
-import './App.css'
+// import '../../src/output.css'
 import SearchBar from '../components/SearchBar'
 import CardBook from '../components/CardBook'
 import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-import { Router } from 'react-router-dom'
 
-const App = () => {
+const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
@@ -42,12 +42,11 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textSearch])
 
-const Home = () => {
   return (
     <div className="bg-[--colorPrim] min-h-screen">
       <Navbar />
       <div className="container mx-auto w-18/12 md:w-8/12">
-        <h1 className="font-extrabold text-4xl mb-4 text-center">
+        <h1 className="title">
           Library_app
         </h1>
         <div className="mx-0">

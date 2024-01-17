@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <h2>Acerca de</h2>
+      <h2 className="title">Acerca de</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
         praesentium distinctio odit, quo corporis quibusdam nostrum numquam

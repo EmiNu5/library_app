@@ -4,9 +4,11 @@ import Home from './Home'
 import About from './About'
 import Cart from './Cart'
 import PageNotFound from './PageNotFound'
+import '../../output.css'
 
 const App = () = {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,6 +17,7 @@ const App = () = {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
+    </>
   )
 }
 

@@ -1,16 +1,17 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from './views/App'
+// import App from './views/App'
+import Home from './views/Home'
 import Cart from './views/Cart'
 import About from './views/About'
 import PageNotFound from './views/PageNotFound'
-import './index.css'
+import './input.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Home />,
     errorElement: <PageNotFound />,
   },
   {
