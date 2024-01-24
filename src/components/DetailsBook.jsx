@@ -1,9 +1,5 @@
-import { useEffect, useState } from 'react'
-// import Cart from '../views/Cart'
-import { Link } from 'react-router-dom'
-
-const DetailsBook = ({ book, closeDetailsBook, addBookToCart }) => {
-  const [addToCart, setAddToCart] = useState([])
+const DetailsBook = (props) => {
+  const { book, closeDetailsBook, addToCart } = props
 
   return (
     <div className="px-3">
@@ -18,8 +14,7 @@ const DetailsBook = ({ book, closeDetailsBook, addBookToCart }) => {
           <h2 className="title">{book.title}</h2>
           <p className="font-semibold text-l">{book.author}</p>
           <p className="">{book.sinopsis}</p>
-          {/* <Link to="./carrito">añadir a carrito</Link> */}
-          <button type="button" className='btn' onClick={ addBookToCart }>añadir a carrito</button>
+          <button type="button" className='btn' onClick={() => addToCart(book)}>añadir a carrito</button>
         </div>
       </div>
     </div>

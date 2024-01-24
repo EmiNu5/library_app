@@ -1,5 +1,6 @@
 const books = [
   {
+    id: 1,
     title: 'Cien años de soledad',
     author: 'Gabriel García Márquez',
     image: 'https://m.media-amazon.com/images/I/A1lNJP8sC6L._SY425_.jpg',
@@ -11,6 +12,7 @@ const books = [
     stock: 100000
   },
   {
+    id: 2,
     title: 'The Lord of the rings',
     author: 'J.R.R. Tolkien',
     image: 'https://m.media-amazon.com/images/I/41vi64toRPL._SY445_SX342_.jpg',
@@ -22,6 +24,7 @@ const books = [
     stock: 100000
   },
   {
+    id: 3,
     title: "Harry Potter and the Philosopher's Stone",
     author: 'J.K. Rowling',
     image: 'https://m.media-amazon.com/images/I/91FYB5csxWL._AC_UY218_.jpg',
@@ -32,6 +35,7 @@ const books = [
     price: 40,
   },
   {
+    id: 4,
     title: 'The Hobbit',
     author: 'J.R.R. Tolkien',
     image: 'https://m.media-amazon.com/images/I/51zMWaFM+PL.jpg',
@@ -43,6 +47,7 @@ const books = [
     stock: 100000
   },
   {
+    id: 5,
     title: '1984',
     author: 'George Orwell',
     image: 'https://m.media-amazon.com/images/I/51W3i+Kj1lL.jpg',
@@ -54,6 +59,7 @@ const books = [
     stock: 100000
   },
   {
+    id: 6,
     title: 'Brave New World',
     author: 'Aldous Huxley',
     image: 'https://m.media-amazon.com/images/I/51PpzUbiLeL.jpg',
@@ -65,6 +71,7 @@ const books = [
     stock: 100000
   },
   {
+    id: 7,
     title: 'The Hunger Games',
     author: 'Suzanne Collins',
     image: 'https://m.media-amazon.com/images/I/71N9ipxBq-L._SY425_.jpg',

@@ -7,7 +7,6 @@ const BuyForm = () => {
           type="email"
           name="emailPerson"
           id="emailPerson"
-          className="border bg-slate-400"
           required
         />
         <label htmlFor="namePerson">Ingrese nombre</label>
@@ -15,7 +14,6 @@ const BuyForm = () => {
           type="text"
           name="namePerson"
           id="namePerson"
-          className="border bg-slate-400"
           required
         />
         <label htmlFor="paymethod">Ingrese medio de pago</label>
@@ -23,7 +21,6 @@ const BuyForm = () => {
           type="text"
           name="paymethod"
           id="paymethod"
-          className="border bg-slate-400"
           required
         />
         <br />

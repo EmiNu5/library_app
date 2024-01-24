@@ -9,7 +9,7 @@ const PageNotFound = () => {
       <h1 className='title'>
         404! Page Not Found
       </h1>
-      <p className="">
+      <p>
         <i>{error.statusText || error.message}</i>
       </p>
       <button
