@@ -6,14 +6,14 @@ import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-import Cart from './Cart.jsx'
+import Cart from '../components/Cart.jsx'
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
   const [isOpenDetailsBook, setIsOpenDetailsBook] = useState(false)
-  const [cartBooks, setCartBooks] = useState([])
+  const [cartBooksStatus, setCartBooksStatus] = useState([])
 
   const fetchData = () => {
     const librosSet = getBooks(textSearch)
@@ -39,10 +39,10 @@ const Home = () => {
   }
 
   const addToCart = (book) => {
-    setCartBooks([...cartBooks, book])
+    setCartBooksStatus([...cartBooksStatus, book])
   }
   const delToCart = (book) => {
-    setCartBooks(cartBooks.filter(item => item.id !== book))
+    setCartBooksStatus(cartBooksStatus.filter((item) => item.id !== book))
   }
 
   useEffect(() => {
@@ -63,10 +63,16 @@ const Home = () => {
         <TabFilter handleFilter={categoriesChosen} />
         <CardBook allBooks={booksStatus} setDetailsBooks={openDetailsModal} />
       </div>
-      {selectedBook && 
-        <DetailsBook book={selectedBook} closeDetailsBook={closeDetailsBook} addToCart={addToCart} />
-      }
-      <Cart cartBooks={cartBooks} delToCart={delToCart} />
+      {selectedBook && (
+        <DetailsBook
+          book={selectedBook}
+          closeDetailsBook={closeDetailsBook}
+          addToCart={addToCart}
+        />
+      )}
+      {cartBooksStatus && (
+        <Cart cartAllBooks={cartBooksStatus} delToCart={delToCart} />
+      )}
       <Footer />
     </div>
   )

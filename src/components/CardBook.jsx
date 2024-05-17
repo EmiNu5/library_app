@@ -12,7 +12,7 @@ const CardBook = ({ allBooks, setDetailsBooks }) => {
           <img
             src={book.image}
             alt={book.title}
-            className="flex w-32  mx-auto  h-48 object-fit rounded"
+            className="flex w-32 mx-auto h-48 object-fit rounded"
           />
         </div>
       )}

@@ -6,6 +6,6 @@ export function getBooks(textSearch) {
     return (
       title.toLowerCase().includes(searchLoweCase) ||
       author.toLowerCase().includes(searchLoweCase) 
-    )
+    ) 
   })
 }

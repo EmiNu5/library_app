@@ -1,9 +1,10 @@
-const Cart = ({ cartBooks, addToCart, delToCart }) => {
+/* eslint-disable react/prop-types */
 
+const Cart = ({ cartAllBooks, addToCart, delToCart }) => {
   return (
     <div id="cart">
-      {/* { cartBooks.length == 0 && <div>Carrito vacio</div> } */}
-      {cartBooks.map((book, index) => 
+      { cartAllBooks.length === 0 && <div>Carrito vacio</div> }
+      { cartAllBooks.map((book, index) => 
         <div key={index} className="">
           <div className="">{book.title}</div>
           <div className="">

@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
-import Cart from './Cart'
+import Cart from '../components/Cart'
 import PageNotFound from './PageNotFound'
 import '../../output.css'
 
-const App = () = {
+const App = () => {
   return (
-    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +16,6 @@ const App = () = {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
-    </>
   )
 }
 
