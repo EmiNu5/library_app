@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react'
-import { getBooks } from '../services/book.js'
+import { useState, useEffect, useContext } from 'react'
+import { getBooks } from '../services/book'
 import SearchBar from '../components/SearchBar'
 import CardBook from '../components/CardBook'
 import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-import Cart from '../components/Cart.jsx'
+import CartContext from '../context/CartContext'
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
-  const [isOpenDetailsBook, setIsOpenDetailsBook] = useState(false)
-  const [cartBooksStatus, setCartBooksStatus] = useState([])
+  const { cart, dispatch } = useContext(CartContext)
 
   const fetchData = () => {
     const librosSet = getBooks(textSearch)
@@ -23,26 +22,28 @@ const Home = () => {
   const changeTextSearch = (value) => {
     setTextSearch(value)
   }
+
   const categoriesChosen = (flag) => {
-    const librosSet = getBooks(textSearch)
-    const librosFilter = librosSet.filter((book) => book.Categories === flag)
+    const librosFilter = booksStatus.filter((book) => book.Categories === flag)
     setBooksStatus(librosFilter)
   }
 
   const openDetailsModal = (book) => {
     setSelectedBook(book)
-    setIsOpenDetailsBook(true)
   }
+
   const closeDetailsBook = () => {
     setSelectedBook(null)
-    setIsOpenDetailsBook(false)
   }
 
   const addToCart = (book) => {
-    setCartBooksStatus([...cartBooksStatus, book])
+    // Update this function to handle quantity
+    dispatch({ type: 'ADD_TO_CART', product: book })
   }
-  const delToCart = (book) => {
-    setCartBooksStatus(cartBooksStatus.filter((item) => item.id !== book))
+
+  const removeFromCart = (book) => {
+    // Update this function to handle quantity
+    dispatch({ type: 'REMOVE_FROM_CART', id: book.id })
   }
 
   useEffect(() => {
@@ -53,7 +54,7 @@ const Home = () => {
     <div className="bg-[--colorPrim] min-h-screen">
       <Navbar />
       <div className="container mx-auto w-18/12 md:w-8/12">
-        <h1 className="title">Library_app</h1>
+        <h1 className="title">Library App</h1>
         <div className="mx-0">
           <SearchBar
             textoAbuscar={textSearch}
@@ -70,9 +71,17 @@ const Home = () => {
           addToCart={addToCart}
         />
       )}
-      {cartBooksStatus && (
-        <Cart cartAllBooks={cartBooksStatus} delToCart={delToCart} />
-      )}
+      <h3>Carrito final</h3>
+      <ul>
+        {cart.map((book) => (
+          <li key={book.id}>
+            {book.title} | {book.quantity}{' '}
+            <button type="button" onClick={() => removeFromCart(book)}>
+              -
+            </button>
+          </li>
+        ))}
+      </ul>
       <Footer />
     </div>
   )

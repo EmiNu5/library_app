@@ -7,9 +7,7 @@ const DetailsBook = (props) => {
         <button
           className="text-white font-extrabold px-20 py-4 ml-auto text-xl"
           onClick={ closeDetailsBook }
-        >
-          x
-        </button>
+        >x</button>
         <div className="bg-white p-5 rounded flex flex-col justify-center items-center gap-5 mx-24">
           <h2 className="title">{book.title}</h2>
           <p className="font-semibold text-l">{book.author}</p>

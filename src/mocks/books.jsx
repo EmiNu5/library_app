@@ -82,6 +82,30 @@ const books = [
     price: 10,
     stock: 100000
   },
+  {
+    id: 8,
+    title: 'Game of Thrones',
+    author: 'George R. R. Martin',
+    image: 'https://m.media-amazon.com/images/I/51CfXk0yCjL.jpg',
+    sinopsis:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    Publication_date: 1996,
+    Categories: 'popular',
+    price: 11,
+    stock: 100000
+  },
+  {
+    id: 9,
+    title: 'Don Quijote de la Mancha',
+    author: 'Miguel de Cervantes',
+    image: 'https://m.media-amazon.com/images/I/A1QU-FgkiEL._SY466_.jpg',
+    sinopsis:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    Publication_date: 1615,
+    Categories: 'popular',
+    price: 55,
+    stock: 100000
+  },
 ]
 
 export default books
