@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import CartContext from "../context/CartContext"
+import CartContext from "../context/Context"
 
 const CartItem = (event) => {
     const { dispatch } = useContext(CartContext)

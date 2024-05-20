@@ -6,13 +6,13 @@ import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-import CartContext from '../context/CartContext'
+
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
-  const { cart, dispatch } = useContext(CartContext)
+
 
   const fetchData = () => {
     const librosSet = getBooks(textSearch)
@@ -38,12 +38,12 @@ const Home = () => {
 
   const addToCart = (book) => {
     // Update this function to handle quantity
-    dispatch({ type: 'ADD_TO_CART', product: book })
+    console.log("hello")
   }
 
   const removeFromCart = (book) => {
     // Update this function to handle quantity
-    dispatch({ type: 'REMOVE_FROM_CART', id: book.id })
+    console.log("hellosad")
   }
 
   useEffect(() => {
@@ -73,14 +73,14 @@ const Home = () => {
       )}
       <h3>Carrito final</h3>
       <ul>
-        {cart.map((book) => (
+        {/* {cart.map((book) => (
           <li key={book.id}>
             {book.title} | {book.quantity}{' '}
             <button type="button" onClick={() => removeFromCart(book)}>
               -
             </button>
           </li>
-        ))}
+        ))} */}
       </ul>
       <Footer />
     </div>

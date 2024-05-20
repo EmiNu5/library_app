@@ -3,12 +3,11 @@ import Home from './Home'
 import About from './About'
 import Cart from '../components/Cart'
 import PageNotFound from './PageNotFound'
-import { CartProvider } from '../context/CartContext'
+import { CartProvider } from '../context/Context'
 import '../../output.css'
 
 const App = () => {
   return (
-    <CartProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,7 +16,7 @@ const App = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
-    </CartProvider>
+  
   )
 }
 
