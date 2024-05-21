@@ -2,37 +2,37 @@ import { useContext } from 'react'
 import { Context } from '../context/Context'
 
 const Cart = () => {
-    const { cart, count, removeFromCart } = useContext(Context)
+    const { cart, count, addToCart, removeFromCart } = useContext(Context)
 
     return (
         <>
             <h2>Carrito</h2>
-            <table className=''>
-                <thead>
-                    <tr>
-                        <th>Libro</th>
-                        <th>Autor</th>
-                        <th>Cantidad</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {cart.map(book => (
-                        <tr key={book.id}>
-                            <td>{book.title}</td>
-                            <td>{book.author}</td>
-                            <td>{book.quantity}</td>
-                            <td>
-                                <button onClick={() => removeFromCart(book)}>
-                                    Remover
-                                </button>
-                            </td>
+            <div className='flex flex-col'>
+                <table>
+                    <thead className='border-b border-neutral-300 font-medium'>
+                        <tr>
+                            <th scope='col' className='px-6 py-2'>Libro</th>
+                            <th scope='col' className='px-6 py-2'>Autor</th>
+                            <th scope='col' className='px-6 py-2'>Cantidad</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {cart.map(book => (
+                            <tr className='border-b border-neutral-200 transition duration-300 ease-in-out' key={book.id}>
+                                <td className='whitespace-nowrap px-6 py-2'>{book.title}</td>
+                                <td className='whitespace-nowrap px-6 py-2'>{book.author}</td>
+                                <td className='whitespace-nowrap px-6 py-2 text-center'>
+                                    <button className='btn py-1' onClick={() => addToCart(book)}>+</button>
+                                    {book.quantity}
+                                    <button className='btn py-1' onClick={() => removeFromCart(book)}>-</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
             <div>
-                <h3>Total de Libros: {count}</h3>
+                <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Total de Libros: {count}</h3>
             </div>
         </>
     )
