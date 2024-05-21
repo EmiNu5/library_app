@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import { getBooks } from '../services/book'
 import SearchBar from '../components/SearchBar'
 import CardBook from '../components/CardBook'
@@ -6,7 +6,7 @@ import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-
+import Cart from '../components/Cart'
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
@@ -36,15 +36,6 @@ const Home = () => {
     setSelectedBook(null)
   }
 
-  const addToCart = (book) => {
-    // Update this function to handle quantity
-    console.log("hello")
-  }
-
-  const removeFromCart = (book) => {
-    // Update this function to handle quantity
-    console.log("hellosad")
-  }
 
   useEffect(() => {
     fetchData()
@@ -68,20 +59,8 @@ const Home = () => {
         <DetailsBook
           book={selectedBook}
           closeDetailsBook={closeDetailsBook}
-          addToCart={addToCart}
         />
       )}
-      <h3>Carrito final</h3>
-      <ul>
-        {/* {cart.map((book) => (
-          <li key={book.id}>
-            {book.title} | {book.quantity}{' '}
-            <button type="button" onClick={() => removeFromCart(book)}>
-              -
-            </button>
-          </li>
-        ))} */}
-      </ul>
       <Footer />
     </div>
   )
