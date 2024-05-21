@@ -1,6 +1,10 @@
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from '../context/Context'
 
 export default function Navbar() {
+  const { count } = useContext(Context)
+
   return (
     <div className=" bg-gradient-to-r from-yellow-700 via-orange-800 to-red-700 flex flex-wrap items-center justify-between mx-auto p-4">
       <div className="flex items-center space-x-3 rtl:space-x-reverse"></div>
@@ -12,7 +16,7 @@ export default function Navbar() {
           Acerca de
         </NavLink>
         <NavLink className="cursor-pointer font-semibold" to="./carrito">
-          Carrito <span className="bg-white text-black rounded p-1 font-mono">0</span>
+          Carrito <span className="bg-white text-black rounded p-1 font-mono">{count}</span>
         </NavLink>
       </div>
     </div>

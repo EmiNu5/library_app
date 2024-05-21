@@ -6,7 +6,6 @@ import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
 import Navbar from '../components/Navbar'
-import Cart from '../components/Cart'
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
