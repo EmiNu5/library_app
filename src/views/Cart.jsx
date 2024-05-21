@@ -1,12 +1,14 @@
 import { useContext } from 'react'
 import { Context } from '../context/Context'
+import Navbar from 'src/components/Navbar'
 
 const Cart = () => {
     const { cart, count, addToCart, removeFromCart } = useContext(Context)
 
     return (
-        <>
-            <h2>Carrito</h2>
+        <div className="bg-[--colorPrim] min-h-screen">
+        <Navbar />
+        <h2 className="title">Carrito</h2>
             <div className='flex flex-col'>
                 <table>
                     <thead className='border-b border-neutral-300 font-medium'>
@@ -34,7 +36,7 @@ const Cart = () => {
             <div>
                 <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Total de Libros: {count}</h3>
             </div>
-        </>
+        </div>
     )
 }
 
