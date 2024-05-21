@@ -1,16 +1,16 @@
 // eslint-disable-next-line react/prop-types
 const SearchBar = ({ textSearch, changeTextSearch }) => {
   return (
-    <div className="bg-[--colorCuar]">
+    <>
       <input
-        className="rounded-md text-2xl my-8"
-        type="text"
-        placeholder="Let's search"
+        className="block w-full p-4 text-m text-black rounded-xl bg-gray-50 focus:border focus:border-spacing-2 focus:ring-red-800 focus:border-red-800 outline-none"
+        type="search"
+        placeholder="Busca tu libro aqui"
         value={textSearch}
-        onChange={ e => changeTextSearch(e.target.value)}
+        onChange={(e) => changeTextSearch(e.target.value)}
         required
       />
-    </div>
+    </>
   )
 }
 

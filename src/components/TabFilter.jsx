@@ -25,7 +25,7 @@ function TabFilter({ handleFilter }) {
           }`}
           onClick={() => handleClick("new")}
         >
-          New
+          Nuevo
         </button>
         <button
           className={`cursor-pointer px-2 rounded-r-3xl font-semibold ${
