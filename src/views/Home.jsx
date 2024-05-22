@@ -41,7 +41,7 @@ const Home = () => {
   }, [textSearch])
 
   return (
-    <div className="bg-[--colorPrim] min-h-screen">
+    <div className="bg-[--colorPrim] flex flex-col min-h-screen">
       <Navbar />
       <div className="container mx-auto w-18/12 md:w-8/12">
         <h1 className="title">Library App</h1>
