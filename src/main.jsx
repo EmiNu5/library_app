@@ -11,7 +11,7 @@ import Provider from './context/Context'
 
 const router = createBrowserRouter([
   {
-    path: '/home',
+    path: '/',
     element: <Home />,
     errorElement: <PageNotFound />,
   },
