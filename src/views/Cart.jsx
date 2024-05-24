@@ -4,7 +4,7 @@ import Navbar from 'src/components/Navbar'
 
 const Cart = () => {
     const { cart, count, addToCart, removeFromCart } = useContext(Context)
-    const totalPrice = cart.reduce((sum, book) => sum + (book.quantity * book.price), 0)
+    const totalPrice = cart.reduce((sum, book) => sum + book.quantity * book.price, 0)
 
     return (
         <div className="bg-[--colorPrim] min-h-screen">
@@ -37,8 +37,8 @@ const Cart = () => {
                 </table>
             </div>
             <div>
-                <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Total de Libros: {count}</h3>
-                <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Total de Libros: {totalPrice}</h3>
+                <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Libros totales: {count}</h3>
+                <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Precio total: {totalPrice}</h3>
             </div>
         </div>
     )

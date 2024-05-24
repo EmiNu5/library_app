@@ -51,7 +51,7 @@ const Home = () => {
             changeTextSearch={changeTextSearch}
           />
         </div>
-        <TabFilter handleFilter={categoriesChosen} />
+        <TabFilter handleFilter={categoriesChosen} booksStatus={booksStatus} />
         <CardBook allBooks={booksStatus} setDetailsBooks={openDetailsModal} />
       </div>
       {selectedBook && (
