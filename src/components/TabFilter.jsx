@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import books from 'src/mocks/books'
 
 const TabFilter = ({ handleFilter }) => {
   const [activeButton, setActiveButton] = useState('')
 
   const handleClick = (flag) => {
-    handleFilter(flag)
     setActiveButton(flag)
+    handleFilter(flag)
   }
 
   const getBtnStyles = (btnFlag) => {
@@ -18,7 +19,6 @@ const TabFilter = ({ handleFilter }) => {
     { label: 'Popular', flag: 'popular' },
     { label: 'Nuevo', flag: 'new' },
     { label: 'Bestsellers', flag: 'bestsellers' },
-    { label: 'Todos', flag: 'all' },
   ]
 
   return (
@@ -34,6 +34,14 @@ const TabFilter = ({ handleFilter }) => {
             {btn.label}
           </button>
         ))}
+        <button
+          type="reset"
+          key="all"
+          className={getBtnStyles('all')}
+          onClick={() => handleClick('all')}
+        >
+          Todos
+        </button>
       </span>
     </div>
   )

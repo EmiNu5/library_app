@@ -39,6 +39,7 @@ const Cart = () => {
             <div>
                 <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Libros totales: {count}</h3>
                 <h3 className='py-6 border border-neutral-300 text-center text-lg font-medium'>Precio total: {totalPrice}</h3>
+                <button type="button" className="btn">COMPRAR</button>
             </div>
         </div>
     )
