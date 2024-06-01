@@ -5,13 +5,20 @@ import CardBook from '../components/CardBook'
 import DetailsBook from '../components/DetailsBook'
 import Footer from '../components/Footer'
 import TabFilter from '../components/TabFilter'
+import books from '../mocks/books'
 import Navbar from '../components/Navbar'
 
 const Home = () => {
   const [booksStatus, setBooksStatus] = useState([])
+  const [allBooks, setAllBooks] = useState([])
   const [textSearch, setTextSearch] = useState('')
   const [selectedBook, setSelectedBook] = useState(null)
 
+  useEffect(() => {
+    setBooksStatus(books)
+    setAllBooks(books)
+    fetchData()
+  }, [textSearch])
 
   const fetchData = () => {
     const librosSet = getBooks(textSearch)
@@ -23,8 +30,12 @@ const Home = () => {
   }
 
   const categoriesChosen = (flag) => {
-    const librosFilter = booksStatus.filter((book) => book.Categories === flag)
-    setBooksStatus(librosFilter)
+    if(flag === 'all') {
+      setBooksStatus(allBooks)
+    } else {
+      const librosFilter = allBooks.filter((book) => book.Categories === flag)
+      setBooksStatus(librosFilter)
+    }
   }
 
   const openDetailsModal = (book) => {
@@ -34,11 +45,6 @@ const Home = () => {
   const closeDetailsBook = () => {
     setSelectedBook(null)
   }
-
-
-  useEffect(() => {
-    fetchData()
-  }, [textSearch])
 
   return (
     <div className="bg-[--colorPrim] flex flex-col min-h-screen">
@@ -51,7 +57,7 @@ const Home = () => {
             changeTextSearch={changeTextSearch}
           />
         </div>
-        <TabFilter handleFilter={categoriesChosen} />
+        <TabFilter handleFilter={categoriesChosen} booksStatus={booksStatus} />
         <CardBook allBooks={booksStatus} setDetailsBooks={openDetailsModal} />
       </div>
       {selectedBook && (
