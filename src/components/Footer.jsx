@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto text-center ">
         <div className="w-full justify-center b-0">
           <a
-            href="https://github.com/EmiNu5/librery_app.git"
+            href="https://github.com/EmiNu5/library_app.git"
             className="cursor-pointer font-semibold"
           >
             Library_app
