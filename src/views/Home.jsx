@@ -17,9 +17,8 @@ const Home = () => {
   useEffect(() => {
     setBooksStatus(books)
     setAllBooks(books)
-    // fetchData()
-  }, [])
-  // }, [textSearch])
+    fetchData()
+  }, [textSearch])
 
   const fetchData = () => {
     const librosSet = getBooks(textSearch)
